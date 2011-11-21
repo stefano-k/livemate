@@ -1,0 +1,37 @@
+#!/bin/sh
+
+lb config noauto \
+	--apt-indices "true" \
+	--apt-recommends "false" \
+	--apt-secure "false" \
+	--apt-source-archives "false" \
+	--architectures "i386 amd64" \
+	--archive-areas "main contrib non-free" \
+	--backports "false" \
+	--binary-images "iso-hybrid" \
+	--bootloader "isolinux" \
+	--cache "false" \
+	--cache-indices "false" \
+	--cache-packages "false" \
+	--clean \
+	--checksums "md5" \
+	--debian-installer "false" \
+	--debug \
+	--distribution "wheezy" \
+	--hostname "mate" \
+	--linux-flavours "686-pae amd64" \
+	--linux-packages "linux-image" \
+	--memtest "none" \
+	--mirror-binary "http://ftp.de.debian.org/debian/" \
+	--mirror-bootstrap "http://localhost:9999/debian/" \
+	--package-lists "standard" \
+	--parent-archive-areas "main contrib non-free" \
+	--parent-distribution "wheezy" \
+	--parent-mirror-binary "http://ftp.de.debian.org/debian/" \
+	--parent-mirror-bootstrap "http://localhost:9999/debian/" \
+	--security "false" \
+	--source "false" \
+	--syslinux-theme "debian-squeeze" \
+	--verbose \
+	--volatile "false" \
+	"${@}"
