@@ -1,0 +1,11 @@
+#!/bin/sh
+
+set -e
+
+mv binary/live/vmlinuz-* binary/live/vmlinuz || true
+mv binary/live/initrd.img-* binary/live/initrd.img || true
+
+mv binary/syslinux/isolinux.bin binary/syslinux/syslinux.bin || true
+rm -f binary/syslinux/isolinux.cfg
+#mv binary/syslinux/isolinux.cfg binary/syslinux/syslinux.cfg || true
+
